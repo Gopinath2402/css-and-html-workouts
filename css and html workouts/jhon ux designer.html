@@ -1,0 +1,560 @@
+<!DOCTYPE shtml>
+<html>
+
+<head>
+    <title>jhon boostrap one page html5</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--styles-->
+    <style>
+        html,
+        body,
+        * {
+            padding: 0px;
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: sans-serif;
+        }
+        
+        header {
+            background-image: url(https://cdn.kenzie.academy/wp-content/uploads/prod/2020/08/07171133/AdobeStock_267332862-1400x933.jpeg);
+            max-width: 100%;
+            max-height: 720px;
+            width: 100%;
+            height: 720px;
+            background-size: cover;
+        }
+        
+        .header {
+            background-color: #FF4444;
+            height: 720px;
+            opacity: 89%;
+        }
+        
+        .img-1 img {
+            display: block;
+            height: 120px;
+            width: 120px;
+            margin: auto;
+            border: 5px #F8B3B3 dashed;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            position: relative;
+            top: 60px;
+        }
+        
+        .head-1 h2 {
+            display: block;
+            line-height: 170px;
+            font-size: 40px;
+            text-align: center;
+            margin: auto;
+            color: white;
+            font-family: 'PT Sans', sans-serif;
+        }
+        
+        .head-1 h3 {
+            display: block;
+            line-height: 0px;
+            font-size: 30px;
+            text-align: center;
+            margin: auto;
+            color: white;
+            font-family: 'PT Sans', sans-serif;
+        }
+        
+        .button a {
+            text-decoration: none;
+            font-size: 25px;
+            display: block;
+            color: #E2356F;
+            width: 190px;
+            height: 30px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            background-color: #FF4444;
+            opacity: 90%;
+            color: white;
+            font-family: 'PT Sans', sans-serif;
+        }
+        
+        .button :hover {
+            background-color: white;
+            opacity: 100%;
+            color: #FF4444;
+        }
+        
+        .button {
+            display: block;
+            border-style: none;
+            border: 2px solid white;
+            text-align: center;
+            margin: auto;
+            border-radius: 5px;
+        }
+        
+        .nav {
+            margin: auto;
+            background-color: #292423;
+            position: relative;
+            top: -99px;
+            display: flex;
+        }
+        
+        header ul {
+            display: inline-flex;
+            list-style: none;
+            margin: auto;
+        }
+        
+        header ul li {
+            margin: 25px;
+            padding: 15px;
+        }
+        
+        header ul li a {
+            text-decoration: none;
+            color: #EDE3E7;
+        }
+        
+        .active,
+        ul li :hover {
+            color: red;
+            outline: 0px;
+            text-decoration: none;
+        }
+        
+        .top-cont {
+            text-align: center;
+            padding-top: 10px;
+            line-height: 10px;
+        }
+        
+        .top-cont h2 {
+            font-size: 40px;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        .top-cont p {
+            text-align: center;
+        }
+        
+        .row {
+            display: flex;
+            justify-content: space-between;
+            max-width: 100%;
+            width: 1100px;
+            padding: 0px;
+        }
+        
+        .row img {
+            padding-left: 20px;
+            max-height: 500px;
+            height: 430px;
+        }
+        
+        .left-cont {
+            margin: auto;
+        }
+        
+        .left-cont h3 {
+            padding-left: 15px;
+            font-weight: bold;
+            font-size: 35px;
+        }
+        
+        .left-cont p {
+            padding-left: 15px;
+            line-height: 1.5em;
+        }
+        
+        .left-cont ul {
+            padding-left: 15px;
+            list-style: none;
+            line-height: 30px;
+            color: #F8B3B3;
+        }
+        
+        .left-cont li::before {
+            content: "";
+            color: #f46f3b;
+            display: inline-block;
+            width: 1em;
+            margin-right: 1em;
+            border: 4px solid;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            height: 3px;
+            width: 3px;
+        }
+        
+        div .cont-2 {
+            background-color: #FF4444;
+            max-height: 700px;
+            height: 600px;
+            color: white;
+        }
+        
+        .top-cont-2 h2 {
+            margin: auto;
+            padding-top: 70px;
+            font-weight: bolder;
+            font-size: 45px;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        .top-cont-2 {
+            text-align: center;
+        }
+        
+        div .mid-cont {
+            display: flex;
+            justify-content: space-around;
+            padding: auto;
+            margin: auto;
+        }
+        
+        .mid-cont element {
+            position: relative;
+            top: 180px;
+            text-align: center;
+        }
+        
+        span i {
+            display: inline-block;
+            border: 1px solid;
+            margin: auto;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            padding: 30px;
+            font-size: 140px;
+            vertical-align: top;
+            position: relative;
+            left: 160px;
+            top: 80px;
+        }
+        
+        .fa:before {
+            font-size: 40px;
+        }
+        
+        div .row-2 {
+            display: flex;
+            max-height: 400px;
+            height: 400px;
+        }
+        
+        .left-2 h2 {
+            font-weight: bolder;
+            font-size: 45px;
+            text-align: center;
+            padding-top: 20px;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        .left-2 p {
+            line-height: 30px;
+            font-size: 16px;
+            width: 590px;
+        }
+        
+        .por-top {
+            padding-top: 10px;
+            text-align: center;
+        }
+        
+        .por-top h2 {
+            font-weight: bold;
+            font-size: 45px;
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        .por-top p {
+            font-size: 16px;
+        }
+        
+        .button-2 ul {
+            display: flex;
+            list-style: none;
+            margin-left: 200px;
+            list-style-type: none;
+        }
+        
+        .button-2 ul li {
+            padding: 25px;
+        }
+        
+        .button-2 ul li a h5 {
+            display: inline-block;
+            text-decoration: none;
+            color: #878887;
+            border: 1px solid #878887;
+            border-radius: 5px;
+            padding: 10px 22px;
+        }
+        
+        .active-2,
+        ul li a h5:hover {
+            background-color: red;
+            color: white;
+        }
+        
+        .right-cont ul {
+            list-style: none;
+            padding-top: 50px;
+            padding-left: 20px;
+        }
+        
+        .right-cont ul li {
+            max-width: 600px;
+            width: 600px;
+            box-shadow: inset 2px 1px rgb(218 209 209);
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!--header of the contant-->
+    <header id="header">
+        <div class="header">
+            <div class="head-1"><br>
+                <div class="img-1">
+                    <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_an_Angular_Developer.jpg"></div><br>
+                <h2>Hello! I Am Jhon Doe</h2>
+                <h3><strong>A UX Designer & Developer Based In Beautiful World</strong></h3><br><br>
+                <button class="button"><a href="#" >Hire Me!</a></button>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li class="active"> <a href="#header">HOME</a></li>
+                <li><a href="#about us">ABOUT ME</a></li>
+                <li><a href="#my skils">MY SKILLS</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#">EXPERIENCE</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+    </header><br>
+    <!--about me-->
+    <section id="about us">
+        <div class="container">
+            <div class="top-cont">
+                <h2>ABOUT ME</h2>
+                <p>A persone who loves Nature and It's creations</p>
+            </div>
+            <div class="row">
+                <div class="dev-img"><img src="https://t4.ftcdn.net/jpg/02/65/60/81/360_F_265608151_dW8v74JWjL0ch4iJ5l2oyPm4kv2WBrqe.jpg">
+                </div>
+                <div class="left-cont">
+                    <h3>My Passion</h3>
+                    <p>Lorem ipsum dolor sit amet, quo meis voluptaria, erant bonorum albucius et per, ei placerat eu, te eos porro veniam. An everti maiorum detracto mea. Eu eos dicam voluptaria, erant bonorum albucius et per, ei sapientem accommodare est.
+                        Saepe dolorum constituam ei vel. Te sit malorum ceteros repudiandae, ne tritani adipisci vis.</p>
+
+                    <p>Lorem ipsum dolor sit amet, voluptaria, erant bonorum albucius et per, ei meis audire placerat eu, te eos porro veniam. An everti maiorum detracto mea. Lorem ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci ipsum gravida
+                        tortor orci ipsum gravida tortor. Consectetur Morbi sagittis, sem quisci ipsum gravida tortor Sagittis, sem quis lacinia faucibus, orci ipsum gravida Ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci</p>
+                    <ul class="list">
+                        <li>Consectetur Morbi sagittis, sem quisci ipsum gravida tortor</li>
+                        <li>Sagittis, sem quis lacinia faucibus, orci ipsum gravida</li>
+                        <li>Ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--my skils-->
+    <section id="my skils">
+        <div class="container-2">
+            <div class="cont-2">
+                <div class="top-cont-2">
+                    <h2>MY SKILLS</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci ipsum</p>
+                </div>
+                <div class="mid-cont">
+                    <span><i class="fa fa-tree"></i></span>
+                    <element>
+                        <h2>User Experience</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </element>
+                    <span><i class="fa fa-crosshairs"></i></span>
+                    <element>
+                        <h2>Designing</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </element>
+                    <span><i class="fa fa-building"></i></span>
+                    <element>
+                        <h2>front-end</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </element>
+                    <span><i class="fa fa-twitter"></i></span>
+                    <element>
+                        <h2>mobile app</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </element>
+                </div>
+            </div>
+            <div class="foot-cont">
+                <div class="row-2">
+                    <div class="left-2">
+                        <h2> TECHNICAL SKILLS</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. um dolor sit amet, consectetur Morbi sagittis, simply dummy text of the printing and typesetting industry. um dolor sit amet, consec sem quisci ipsu</p>
+
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. um dolor sit amet, consectetur Morbi. is, simply dummy text of the printing and typesetting industry. um dolor sit amet.</p>
+                    </div>
+                    <div class="right-cont">
+                        <ul>
+                            <li class="lug-1" style="
+    background-color: #ece6e6;
+    position: relative;
+">
+                                <div class="higlt-html5" style="background-color: #2e6797;width: 60%;">
+                                    <div class="html5" style="
+    padding: 5px 40px 5px 10px;
+    color: rgba(255,255,255,0.54);
+    background-color: #4b7697;
+    width: fit-content;
+">HTML/HTML5</div><span class="higlt-60" style="
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    color: #888888;
+">60%</span></div>
+                            </li>
+                            <br>
+                            <li class="lug-1" style="
+    position: relative;
+    background-color: #ece6e6;
+">
+                                <div class="higlt-asp" style="
+    background-color: #5cb85c;
+    width: 40%;
+">
+                                    <div class="asp" style="
+    color: rgba(255,255,255,0.54);
+    padding: 5px 40px 5px 10px;
+    background-color: #4f984f;
+    width: fit-content;
+">ASP.net</div><span class="higlt-60" style="
+    position: absolute;
+    top: 0;
+    right: 4px;
+    color: #888888;
+    padding-top: 7px;
+">40%</span></div>
+                            </li><br>
+                            <li class="lug-1" style="
+    position: relative;
+    background-color: #ece6e6;
+">
+                                <div class="higlt-java" style="
+    background-color: #5bc0de;
+    width: 20%;
+    color: rgba(225,225,225,0.54);
+">
+                                    <div class="java" style="
+    padding: 5px 40px 5px 10px;
+    background-color: #4e9fb7;
+    width: fit-content;
+">Java</div><span class="higlt-60" style="
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    color: #888888;
+">20%</span></div>
+                            </li><br>
+                            <li class="lug-1" style="
+    position: relative;
+    background-color:#ece6e6 ;
+">
+                                <div class="higlt-js" style="background-color: #f0ad4e;width: 60%;">
+                                    <div class="js" style="
+    padding: 5px 40px 5px 10px;
+    background-color: #c58f43;
+    width: fit-content;
+    color: rgba(225,225,225,0.54);
+">JavaScript/jQuery</div><span class="higlt-60" style="position: absolute;top: 8px;right: 4px;color: #888888;">60%</span></div>
+                            </li><br>
+                            <li class="lug-1" style="
+    position: absolute;
+    background-color: #ece6e6;
+">
+                                <div class="higlt-css3" style="
+    background-color: #d9534f;
+    width: 80%;
+">
+                                    <div class="css3" style="
+    padding: 5px 40px 5px 10px;
+    color: rgba(225,225,225,0.54);
+    background-color: #b34744;
+    width: fit-content;
+">CSS/CSS3</div><span class="higlt-60" style="
+    position: absolute;
+    right: 4px;
+    top: 8px;
+    color: #888888;
+">80%</span></div>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+                <!--id section portoflio-->
+                <section id="portoflio">
+                    <div class="container-3">
+                        <div class="por-top">
+                            <h2>PORTFOLIO</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci ipsum</p>
+                        </div>
+                        <div class="button-2">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <h5 class="active-2">ALL</h5>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h5>DESIGN</h5>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h5>DEVELOPMENT</h5>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h5>WEB APP</h5>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h5>MOBILE APP</h5>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+
+
+
+
+</body>
+
+</html>

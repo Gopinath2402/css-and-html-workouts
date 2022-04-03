@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>table-1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+        html,
+        body,
+        * {
+            padding: 0px;
+            margin: 0px;
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        body {
+            background-color: #3E3B3B;
+        }
+        
+        .top-bar {
+            font-family: arial, sans-serif;
+            background-color: black;
+            max-width: 100%;
+            width: 100%;
+            height: 65px;
+            color: white;
+        }
+        
+        .right-top h2 {
+            position: absolute;
+            left: 40px;
+            top: 0px;
+            font-size: 30px;
+        }
+        
+        .right-top p {
+            position: absolute;
+            left: 40px;
+            top: 40px;
+            font-size: 17px;
+        }
+        
+        .higlt-pen {
+            display: inline-block;
+            color: #948A8A;
+            font-size: 17px;
+        }
+        
+        .left-top {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        
+        ul {
+            display: flex;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        ul li {
+            padding-right: 10px;
+        }
+        
+        ul li a p {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #483D3D;
+            color: white;
+            border: 1px solid #483D3D;
+            border-radius: 4px;
+            padding: 10px 20px 10px 20px;
+        }
+        
+        .active,
+        ul li a p:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .main-contant {
+            max-width: 100%;
+            width: 70%;
+            padding: 50px;
+            position: relative;
+            left: 10%;
+        }
+        
+        .contant {
+            position: absolute;
+            max-width: 100%;
+            width: 100%;
+            height: 920px;
+        }
+        
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid;
+            line-height: 30px;
+            background-color: white;
+        }
+        
+        td,
+        th {
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(odd) {
+            background-color: #ece6e6;
+        }
+        
+        .first-table th {
+            background-color: #FF2B2B;
+            color: white;
+        }
+        
+        .first-table {
+            margin-bottom: 60px;
+        }
+        
+        .second-table th {
+            background-color: #3BDC57;
+            color: white;
+        }
+        
+        .second-table {
+            margin-bottom: 60px;
+        }
+        
+        .third-table th {
+            background-color: #379FE6;
+            color: white;
+        }
+        
+        .third-table {
+            margin-bottom: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--top bar-->
+    <div class="top-bar">
+        <div class="right-top">
+            <h2>CSS Table Layout</h2>
+            <p><span class="higlt-pen">A PEN BY</span> Luke peters</p>
+        </div>
+        <div class="left-top">
+            <ul>
+                <li>
+                    <a href="#">
+                        <p class="active"><i class="fas fa-code-branch" style="color: white;"></i> Fork</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Change View</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>log in</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>sign up</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <!--bottom-->
+    <div class="contant">
+        <div class="main-contant">
+            <div class="first-box">
+                <table class="first-table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Occupation</th>
+                        <th>Location</th>
+                    </tr>
+                    <tr>
+                        <td>Luke peters</td>
+                        <td>25</td>
+                        <td>Web developer</td>
+                        <td>brookline</td>
+                    </tr>
+                    <tr>
+                        <td>Joseph Smith</td>
+                        <td>27</td>
+                        <td>app developer</td>
+                        <td>brookline,MA</td>
+                    </tr>
+                    <tr>
+                        <td>Maxwell Jhonson</td>
+                        <td>26</td>
+                        <td>UX designer</td>
+                        <td>brookline</td>
+                    </tr>
+                    <tr>
+                        <td>Harry Potter</td>
+                        <td>28</td>
+                        <td>Front-End Developer</td>
+                        <td>Boston,MA</td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="box-2">
+                <table class="second-table">
+                    <tr>
+                        <th>Product</th>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                        <th>Data Sold</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>Solid oak work table</td>
+                        <td>$800</td>
+                        <td>10</td>
+                        <td>03/15/2014</td>
+                        <td>Waiting for pickup</td>
+                    </tr>
+                    <tr>
+                        <td>Leather iPhone wallet</td>
+                        <td>$45</td>
+                        <td>120</td>
+                        <td>02/28/2014</td>
+                        <td>In Transit</td>
+                    </tr>
+                    <tr>
+                        <td>27" Apple Thunderbolt displays</td>
+                        <td>$1000</td>
+                        <td>25</td>
+                        <td>02/10/2014</td>
+                        <td>Devilered</td>
+                    </tr>
+                    <tr>
+                        <td>Bose studio headphones</td>
+                        <td>$60</td>
+                        <td>90</td>
+                        <td>01/12/2014</td>
+                        <td>Devilered</td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="last-box">
+                <table class="third-table">
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Active</th>
+                    </tr>
+                    <tr>
+                        <td>luke</td>
+                        <td>peter@gmail.com</td>
+                        <td>********</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Joseph</td>
+                        <td>smith@gmail.com</td>
+                        <td>********</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Maxwell</td>
+                        <td>jhonson@gmail.com</td>
+                        <td>********</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Harry</td>
+                        <td>potter@gmail.com</td>
+                        <td>********</td>
+                        <td>Yes</td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

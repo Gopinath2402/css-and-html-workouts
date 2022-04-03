@@ -1,0 +1,213 @@
+<html>
+
+<head>
+    <title>checkout form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html,
+        body,
+        * {
+            padding: 0px;
+            margin: 0px;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            user-select: none;
+        }
+        
+        .container {
+            display: flex;
+            font-family: sans-serif;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+        }
+        
+        img {
+            height: 680px;
+            width: 430px;
+            filter: blur(1px);
+        }
+        
+        .left-cont {
+            position: relative;
+            width: 430px;
+            height: 690px;
+        }
+        
+        .top {
+            font-weight: normal;
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            font-size: 15px;
+        }
+        
+        .top a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .top i {
+            padding-right: 10px;
+        }
+        
+        .bottom {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+        
+        .bottom h3 {
+            font-size: 35px;
+        }
+        
+        .bottom span {
+            font-weight: bolder;
+            font-size: 20px;
+        }
+        
+        .right-cont {
+            height: 690px;
+            width: 430px;
+            background-color: white;
+            z-index: 1;
+        }
+        
+        .bill {
+            padding: 25px;
+            background-color: rgba(234, 234, 234, 0.6);
+            border-bottom: 1px solid #b8b8b8;
+            font-size: 20px;
+        }
+        
+        .top-2 {
+            padding: 10px;
+            line-height: 30px;
+        }
+        
+        .bill a {
+            float: left;
+            text-decoration: none;
+            color: black;
+        }
+        
+        .higlt-text {
+            color: #b8b8b8;
+            font-size: 18px;
+        }
+        
+        .align-right {
+            float: right;
+        }
+        
+        form {
+            position: relative;
+            line-height: 60px;
+            background-color: rgba(242, 242, 242, 0.2);
+        }
+        
+        .bottom-2 {
+            padding: 25px;
+        }
+        
+        label {
+            color: #b8b8b8;
+        }
+        
+        input[type=text] {
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 1px solid #bfbfbf;
+            width: 360px;
+            border-radius: 0px;
+            font-size: 15px;
+            padding-bottom: 10px;
+            background-color: rgba(242, 242, 242, 0.2);
+        }
+        
+        input[type=text-2] {
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 1px solid #bfbfbf;
+            border-radius: 0px;
+            width: 130px;
+            font-size: 15px;
+            padding-bottom: 10px;
+            background-color: rgba(242, 242, 242, 0.2);
+        }
+        
+        input::placeholder {
+            color: black;
+        }
+        
+        button {
+            padding: 15px;
+            font-size: 20px;
+            width: 310px;
+            background-color: #f19542;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 20px;
+            position: relative;
+            top: -20px;
+        }
+        
+        .right {
+            float: right;
+            position: relative;
+            top: -88px;
+            right: 20px;
+        }
+        
+        .fa-arrow-left {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-cont">
+            <img src="https://images.unsplash.com/photo-1501959915551-4e8d30928317?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
+            <div class="top">
+                <p> <i class="fa fa-arrow-left"></i><a href="#">checkout</a> </p>
+            </div>
+            <div class="bottom">
+                <h3>Room<br>Breakfast</h3><br>
+                <span class="cost">$ 8.99</span>
+            </div>
+        </div>
+        <div class="right-cont">
+            <div class="bill">
+                <div class="top-2">
+                    <p class="higlt-text">BREAKFAST INCLUDES</p>
+                    <p><a href="#"> Croissant</a> <span class="align-right">$ 1.50</span></p><br>
+                    <p><a href="#"> Scrambled eggs</a> <span class="align-right">$ 3.50</span></p><br>
+                    <p><a href="#"> Coffee</a> <span class="align-right">$ 1.99</span></p><br>
+                    <p><a href="#"> Orange juice</a> <span class="align-right">$ 2.00</span></p><br>
+                </div>
+            </div>
+            <form action=#>
+                <div class="bottom-2">
+                    <label for="cnum">CARD NUMBER</label><br>
+                    <input type="text" placeholder="4319 5678 0432 1854"><br>
+                    <label for="cname">CARD HOLDER</label><br>
+                    <input type="text" placeholder="Mark Appleyard"><br>
+                    <label for="date">EXPIRES</label><br>
+                    <input type="text-2" placeholder="05/2018"><br>
+                    <div class="right">
+                        <label for="cvv">CVC/CVV</label><br>
+                        <input type="text-2" placeholder="05/2018"></div><br>
+                    <button class="button">Pay now</button>
+
+            </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

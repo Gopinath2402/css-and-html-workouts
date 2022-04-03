@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body,
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Bakbak One', cursive;
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        img {
+            position: relative;
+            top: 2px;
+            height: 550px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            height: 100vh;
+            background-color: #9db092;
+        }
+        
+        .container-1 {
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            background-color: white;
+            width: 450px;
+            height: 550px;
+        }
+        
+        .top,
+        .text,
+        .bottom,
+        form {
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        
+        .text h2 {
+            font-size: 45px;
+        }
+        
+        form {
+            line-height: 50px;
+        }
+        
+        input:focus {
+            outline: none;
+        }
+        
+        input[type=text] {
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 2px solid #bfbfbf;
+            width: 380px;
+            border-radius: 0px;
+            font-size: 15px;
+            padding-bottom: 10px;
+        }
+        
+         ::placeholder {
+            color: #bfbfbf;
+        }
+        
+        button {
+            width: 160px;
+            padding: 8px;
+            border: 1px solid #445b41;
+            border-radius: 0px;
+            margin-top: 40px;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 5px;
+            font-size: 20px;
+            font-family: 'Kaushan Script', cursive;
+        }
+        
+        .bottom {
+            margin-bottom: 25px;
+        }
+        
+        .bottom a {
+            color: #445b41;
+        }
+        
+        button:hover {
+            background-color: #445b41;
+            color: white;
+        }
+        
+        .top {
+            font-family: 'Kaushan Script', cursive;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-1">
+            <p class="top">Kaffetorst</p>
+            <div class="text">
+                <h2>Hello there.</h2>
+                <p>You need an account to continue</p>
+            </div>
+            <form action="action.png/php">
+                <label for="name"></label>
+                <input type="text" placeholder="Full Name"><br>
+                <label for="mail"></label>
+                <input type="text" placeholder="Email"><br>
+                <label for="pws"></label>
+                <input type="text" placeholder="Password"><br>
+                <label for="repws"></label>
+                <input type="text" placeholder="Repeat Password"><br>
+                <button class="button">Sign up</button>
+            </form>
+            <div class="bottom">
+                <p>By signing up,you agree to the <a href="#">Terms&Conditions</a></p>
+            </div>
+        </div>
+        <div class="container-2">
+            <img src="https://images.unsplash.com/photo-1543233604-3baca4d35513?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29mZmVlJTIwY3VwfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Coffee">
+
+        </div>
+    </div>
+</body>
+
+</html>

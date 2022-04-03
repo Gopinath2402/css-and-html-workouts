@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>rungon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html,
+        body* {
+            padding: 0;
+            margin: 0;
+        }
+        
+        * {
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        img {
+            border-radius: 10px;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            border: 1px solid #000000;
+            max-width: 1500px;
+            width: 1500px;
+            max-height: 1100px;
+            height: 1100px;
+            border-radius: 20px;
+            font-family: sans-serif;
+            cursor: pointer;
+        }
+        
+        .container-1 {
+            flex: 1;
+            overflow-y: scroll;
+        }
+        
+        .container-1 li {
+            list-style: none;
+            line-height: 50px;
+            font-size: 20px;
+        }
+        
+        .container-1 i {
+            padding-right: 5px;
+        }
+        
+        .color:hover {
+            color: orange;
+            cursor: pointer;
+        }
+        
+        .container-2 {
+            padding: 15px;
+        }
+        
+        .active {
+            color: #0bdeff;
+            font-weight: bold;
+        }
+        
+        .algin-left {
+            position: relative;
+            left: 90%;
+            top: -43px;
+        }
+        
+        .top-bar ul {
+            display: flex;
+            list-style: none;
+            font-weight: bold;
+        }
+        
+        .higlt-box:hover {
+            color: orange;
+        }
+        
+        .higlt-dot {
+            position: relative;
+            left: 60%;
+        }
+        
+        .higlt-dot:hover {
+            color: orange;
+        }
+        
+        .higlt-dot-2:hover {
+            color: orange;
+        }
+        
+        .num-1:hover {
+            color: orange;
+        }
+        
+        .num-2:hover {
+            color: orange;
+        }
+        
+        .num-3:hover {
+            color: orange;
+        }
+        
+        .algin-left:hover {
+            color: orange;
+        }
+        
+        .algin-left-2:hover {
+            color: orange;
+        }
+        
+        .top-bar li {
+            position: relative;
+            right: 30px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        .first-box ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        .first-box {
+            border: 1px solid #0bdeff;
+            width: 800px;
+            border-radius: 10px;
+        }
+        
+        .box {
+            border: 1px solid #0bdeff;
+            padding: 10px 10px 0px 10px;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        
+        .box-2 {
+            border: 1px solid #0bdeff;
+            padding: 10px 10px 0px 10px;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        
+        .first-box li {
+            padding-right: 60px;
+        }
+        
+        .first-box-2 li {
+            padding-right: 67px;
+        }
+        
+        .first-box-2 ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        .first-box-2 {
+            border: 1px solid #0bdeff;
+            width: 800px;
+            border-radius: 10px;
+        }
+        
+        .higlt-text {
+            font-size: 10px;
+            position: relative;
+            top: -20px;
+        }
+        
+        .last-box {
+            border: 1px solid #0bdeff;
+            width: 800px;
+            max-height: 400px;
+            line-height: 0px;
+            border-radius: 10px;
+        }
+        
+        .first-box,
+        .first-box-2,
+        .last-box {
+            margin-left: 20px;
+        }
+        
+        .first-box h3 {
+            margin-left: 20px;
+        }
+        
+        .first-box-2 h3 {
+            margin-left: 20px;
+        }
+        
+        .last-box h3 {
+            margin-left: 20px;
+        }
+        
+        .left-align {
+            position: relative;
+            left: 80%;
+            top: -95px;
+        }
+        
+        .algin-left-2 {
+            position: relative;
+            left: 90%;
+            top: -13px;
+        }
+        
+        .last-box .fa {
+            color: orange;
+        }
+        
+        .higlt-icon {
+            border: 1px solid #0bdeff;
+            border-radius: 5px;
+            padding: 5px 5px 5px 5px;
+        }
+        
+        .last-box h5 {
+            position: relative;
+            left: 12%;
+            top: -70px;
+            font-size: 15px;
+        }
+        
+        .higlt-text-2 {
+            position: relative;
+            left: 12%;
+            top: -60px;
+            font-size: 14px;
+        }
+        
+        .last-box ol {
+            list-style: none;
+        }
+        
+        .num-1:before {
+            content: "01";
+            position: relative;
+            right: 20px;
+            top: -30px;
+        }
+        
+        .num-2:before {
+            content: "02";
+            position: relative;
+            right: 20px;
+            top: -30px;
+        }
+        
+        .num-3:before {
+            content: "03";
+            position: relative;
+            right: 20px;
+            top: -30px;
+        }
+        
+        .container-3 {
+            padding: 15px;
+        }
+        
+        .top-cont ul {
+            list-style: none;
+        }
+        
+        .top-cont .fa {
+            font-size: 19px;
+        }
+        
+        .higlt-dot-2 {
+            position: relative;
+            left: 90%;
+            top: -40px;
+        }
+        
+        .higlt-icon-2 {
+            position: relative;
+            right: 25px;
+            border: 1px solid #0bdeff;
+            border-radius: 5px;
+            padding: 15px 5px 15px 5px;
+        }
+        
+        .top-cont h5 {
+            position: relative;
+            left: 5%;
+            top: -55px;
+            font-size: 15px;
+        }
+        
+        .higlt-text-3 {
+            position: relative;
+            left: 5%;
+            top: -70px;
+            font-size: 14px;
+        }
+        
+        .left-align-2 {
+            position: relative;
+            left: 55%;
+            top: -85px;
+        }
+        
+        .left-align-2-2 {
+            position: relative;
+            left: 50%;
+            top: -85px;
+        }
+        
+        hr {
+            color: #0bdeff;
+            margin-right: 30px;
+            height: 1090px;
+        }
+        
+        .mid-cont ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        .mid-cont li {
+            padding-right: 30px;
+        }
+        
+        .higlt-border {
+            background-color: #108B9D;
+            width: 370px;
+            color: white;
+            height: 380px;
+            border-radius: 15px;
+        }
+        
+        .foot-cont img {
+            position: relative;
+            left: 30%;
+            top: 20px;
+        }
+        
+        .foot-cont .fa {
+            font-size: 30px;
+        }
+        
+        .foot-cont h3 {
+            text-align: center;
+            padding-top: 30px;
+            color: white;
+        }
+        
+        .foot-cont h4 {
+            text-align: center;
+            padding-top: 10px;
+            color: white;
+        }
+        
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        .playpause-track,
+        .prev-track,
+        .next-track,
+        .redo-track,
+        .random-track {
+            padding: 15px;
+            position: relative;
+            left: 55px;
+        }
+        
+        .slider_container {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .title:hover {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-1">
+            <div class="title">
+                <ul>
+                    <li><i class="fa fa-play-circle"></i> Rungon</li>
+                </ul>
+            </div>
+            <div class="higlt-menu">
+                <ul>
+                    <li>MENU</li>
+                    <li class="color"><i class="fa fa-home"></i> Home</li>
+                    <li class="color"><i class="fa fa-search"></i> Search</li>
+                    <li class="color"><i class="fa fa-compass"></i> Discover </li>
+                    <li class="color"><i class="fa fa-spotify"></i> Albums</li>
+                    <li class="color"><i class="fa fa-user"></i> Artists</li>
+                </ul>
+            </div>
+            <div class="higlt-library">
+                <ul>
+                    <li>LIBRARY</li>
+                    <li class="color"><i class="fa fa-history"></i> Recent</li>
+                    <li class="color"><i class="fa fa-heart"></i> Favourites</li>
+                    <li class="color"><i class="fa fa-home"></i> Local</li>
+                </ul>
+            </div>
+            <div class="higlt-playlist">
+                <ul>
+                    <li>PLAYLIST</li>
+                    <li class="color"><i class="fa fa-plus-square"></i> Create New</li>
+                    <li class="color"><i class="fa fa-music"></i> Pop Punk</li>
+                    <li class="color"><i class="fa fa-music"></i> Rocks</li>
+                </ul>
+            </div>
+            <div class="higlt-general">
+                <ul>
+                    <li>GENERAL</li>
+                    <li class="color"><i class="fa fa-cog"></i>Settings</li>
+                    <li class="color"><i class="fa fa-power-off"></i> Log Out</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-2">
+            <div class="top-bar">
+                <ul>
+                    <li class="color">Music</li>
+                    <li class="color">Podcast</li>
+                    <li class="color">Live</li>
+                    <li class="color">Radio</li>
+                    <li class="higlt-dot"><i class="fa fa-ellipsis-h"></i></li>
+                </ul>
+            </div>
+            <div class="first-box">
+                <h3>Global Top 50</h3>
+                <h4 class="algin-left">See all</h4>
+                <ul>
+                    <li class="higlt-box">
+                        <div class="box"><img src="https://pbcdn1.podbean.com/imglogo/image-logo/5267859/toldyouso_1440.jpg" width="90px" height="70px">
+                            <h4>Told You So</h4><span class="higlt-text">Paramore</span></div>
+                    </li>
+                    <li class="higlt-box">
+                        <div class="box"><img src="https://www.pngarea.com/pngm/271/2242466_adventure-time-logo-png-song-png-download-png.png" width="90px" height="70px">
+                            <h4>The Adventure</h4><span class="higlt-text">Angle & Airwaves</span></div>
+                    </li>
+                    <li class="higlt-box">
+                        <div class="box"><img src="https://i.pinimg.com/originals/7a/91/bb/7a91bba6b35fe7f8bd01c406d4c073dc.png" width="90px" height="70px">
+                            <h4>Paradise City</h4><span class="higlt-text">Guns N Roses</span></div>
+                    </li>
+                    <li class="higlt-box">
+                        <div class="box"><img src="https://upload.wikimedia.org/wikipedia/en/d/d8/Skid_Row_18_and_Life.jpg" width="90px" height="70px">
+                            <h4>18 And Life</h4><span class="higlt-text">Skid Row</span></div>
+                    </li>
+                </ul>
+            </div><br>
+            <div class="first-box-2">
+                <h3>Songs You Might Like</h3>
+                <h4 class="algin-left">See all</h4>
+                <ul>
+                    <li class="higlt-box">
+                        <div class="box-2"><img src="https://i.pinimg.com/originals/24/1f/f0/241ff03e92f2b8bcd8443a283f0e9159.png" width="90px" height="70px">
+                            <h4>Last Hope</h4><span class="higlt-text">Paramore</span></div>
+                    </li>
+                    <li class="higlt-box">
+                        <div class="box-2"><img src="https://w7.pngwing.com/pngs/658/383/png-transparent-basket-case-material-others-material-email-address-aerial-work-platform.png" width="90px" height="70px">
+                            <h4>Basket Case</h4><span class="higlt-text">Green Day</span></div>
+                    </li>
+                    <li class="higlt-box">
+                        <div class="box-2"><img src="https://pbs.twimg.com/profile_images/1226969031724453893/zNClc0GC.png" width="90px" height="70px">
+                            <h4>Patience</h4><span class="higlt-text">Guns N Roses</span></div>
+                    </li>
+                    <li class="higlt-box">
+                        <div class="box-2"><img src="https://i.ytimg.com/an/Pl81UP8bUp4/638eb3cb-da15-4435-9e60-2918bb5aff19_mq.jpg?v=5d559a29" width="90px" height="70px">
+                            <h4>Jet Lag</h4><span class="higlt-text">Simple Plan</span></div>
+                    </li>
+                </ul>
+            </div><br>
+            <div class="last-box">
+                <h3>Recently Played</h3>
+                <h4 class="algin-left-2">See all</h4>
+                <ol class="higlt-list">
+                    <li class="num-1"><img src="https://i.ytimg.com/an/Pl81UP8bUp4/638eb3cb-da15-4435-9e60-2918bb5aff19_mq.jpg?v=5d559a29" width="60px" height="60px">
+                        <h5>I Miss You</h5><br><span class="higlt-text-2">Blink 182</span>
+                        <div class="left-align"> 3:45 <span class="higlt-icon"><i class="fa fa-play"></i></span> <span class="higlt-icon"> <i class="fa fa-plus"></i></span></li>
+                    <li class="num-2"><img src="https://i.pinimg.com/originals/24/1f/f0/241ff03e92f2b8bcd8443a283f0e9159.png" width="60px" height="60px">
+                        <h5>When I Come Around</h5><br><span class="higlt-text-2">Green Day</span>
+                        <div class="left-align"> 2:32 <span class="higlt-icon"><i class="fa fa-play"></i></span> <span class="higlt-icon"> <i class="fa fa-plus"></i></span></li>
+                    <li class="num-3"><img src="https://images.hungama.com/c/1/3ed/901/395648/395648_300x300.jpg" width="60px" height="60px">
+                        <h5>Ignorance</h5><br><span class="higlt-text-2">Paramore</span>
+                        <div class="left-align"> 3:15 <span class="higlt-icon"><i class="fa fa-play"></i></span> <span class="higlt-icon"> <i class="fa fa-plus"></i></span></li>
+                </ol>
+                </div>
+                </div>
+                <hr>
+                <div class="container-3">
+                    <div class="top-cont">
+                        <h4>Notifications</h4><span class="higlt-dot-2"><i class="fa fa-ellipsis-h"></i></span>
+                        <ul>
+                            <li><span class="higlt-icon-2"><i class="fa fa-plus"></i></span>
+                                <h5>Playlist Added</h5><span class="higlt-text-3">106 Songs</span> <span class="left-align-2"> 2 Mins</span></li>
+                            <li><span class="higlt-icon-2"><i class="fa fa-plus"></i></span>
+                                <h5>Playlist Shorted</h5><span class="higlt-text-3">TO 32 Users</span><span class="left-align-2-2">8 Hours</span></li>
+                        </ul>
+                    </div>
+                    <div class="mid-cont">
+                        <h4>Top Artists</h4>
+                        <span class="higlt-dot-2"><i class="fa fa-ellipsis-h"></i></span>
+                        <ul>
+                            <li class="color"><img src="https://i.ytimg.com/an/Pl81UP8bUp4/638eb3cb-da15-4435-9e60-2918bb5aff19_mq.jpg?v=5d559a29" width="90px" height="90px"><br>Blink 182</li>
+                            <li class="color"><img src="https://pbs.twimg.com/profile_images/1226969031724453893/zNClc0GC.png" width="90px" height="90px"><br>Green Day</li>
+                            <li class="color"><img src="https://upload.wikimedia.org/wikipedia/en/e/ed/Green_Day_-_American_Idiot_album_cover.png" width="90px" height="90px"><br>Paramore</li>
+                        </ul>
+                        <ul>
+                            <li class="color"><img src="https://www.pngarea.com/pngm/271/2242466_adventure-time-logo-png-song-png-download-png.png" width="90px" height="90px"><br>Scorpions</li>
+                            <li class="color"><img src="https://pbs.twimg.com/profile_images/1226969031724453893/zNClc0GC.png" width="90px" height="90px"><br>Simple Plan</li>
+                            <li class="color"><img src="https://i.ytimg.com/an/Pl81UP8bUp4/638eb3cb-da15-4435-9e60-2918bb5aff19_mq.jpg?v=5d559a29" width="90px" height="90px"><br>Skid Row</li>
+                        </ul>
+                    </div>
+                    <div class="foot-cont">
+                        <div class="higlt-border">
+                            <h3>Now Playing</h3>
+                            <img src="https://www.pngarea.com/pngm/271/2242466_adventure-time-logo-png-song-png-download-png.png" width="180px" height="120px">
+                            <h4>The adventure<br><span class="higlt-text-4">Angels & Airwaves</span></h4>
+                            <div class="slider_container">
+                                <div class="current-time">00:00</div>
+                                <input type="range" min="1" max="100" value="0" class="seek_slider">
+                                <div class="total-duration">03:40</div>
+                            </div>
+                            <div class="buttons">
+                                <div class="redo-track">
+                                    <i class="fa fa-retweet"></i>
+                                </div>
+                                <div class="prev-track">
+                                    <i class="fa fa-step-backward "></i>
+                                </div>
+                                <div class="playpause-track">
+                                    <i class="fa fa-play-circle "></i>
+                                </div>
+                                <div class="next-track">
+                                    <i class="fa fa-step-forward "></i>
+                                </div>
+                                <div class="random-track">
+                                    <i class="fa fa-random"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+</body>
+
+</html>

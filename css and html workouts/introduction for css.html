@@ -1,0 +1,171 @@
+<html>
+
+<head>
+    <style>
+        html,
+        body,
+        * {
+            padding: 0px;
+            margin: 0px;
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        body {
+            width: 90%;
+            margin: auto;
+            max-width: 840px;
+        }
+        
+        div#header {
+            background-color: #e6b11e;
+            overflow: auto;
+            padding: 30px 0px;
+        }
+        
+        span.higlt-t {
+            font-size: 54px;
+            display: inline-block;
+            width: 30px;
+            margin-right: 10px;
+            vertical-align: top;
+            position: relative;
+            top: 14px;
+            color: #e6b11e;
+        }
+        
+        span.intro-hdr {
+            float: left;
+            line-height: 200px;
+            margin-left: 90px;
+            margin-right: 110px;
+            font-family: sans-serif;
+            color: #FFF;
+            font-size: 46px;
+            word-spacing: 15px;
+        }
+        
+        span.intro-hdr-right {
+            float: right;
+            color: #466f82;
+            font-size: 200px;
+            font-family: sans-serif;
+            font-weight: 500;
+            position: absolute;
+            top: 11px;
+        }
+        
+        div#mainContent {
+            background-color: #f6f4e1;
+            overflow: auto;
+        }
+        
+        div#objective {
+            padding: 10px 140px;
+            text-transform: uppercase;
+            color: #FFF;
+            background-color: #466f82;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+        }
+        
+        .bdy-cont {
+            background-color: #fff;
+            width: 560px;
+            margin: auto;
+            padding: 15px 40px;
+            color: #466f82;
+            border: 2px solid #466f82;
+            border-top: 0;
+            line-height: 28px;
+        }
+        
+        p.inr-hdr {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        li::before {
+            content: "";
+            color: #f46f3b;
+            display: inline-block;
+            width: 1em;
+            margin-right: 1em;
+            border: 3px solid;
+            height: 0px;
+            width: 0px;
+            vertical-align: middle;
+        }
+        
+        .desc {
+            width: 560px;
+            margin: 50px auto;
+            line-height: 26px;
+            margin-bottom: 200px;
+        }
+        
+        .desc p {
+            padding-right: 100px;
+        }
+        
+        .hlt-cont {
+            display: inline-block;
+            width: calc(100% - 40px);
+            vertical-align: top;
+        }
+        .higlt-num{
+            display: inline-block;
+            padding: 10px;
+            position: relative;
+            left: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header content -->
+    <div id="header">
+        <h1>
+            <span class="intro-hdr">Introduction to CSS</span>
+            <span class="intro-hdr-right">3</span>
+        </h1>
+    </div>
+
+    <!-- content -->
+    <div id="mainContent">
+        <div id="objective">
+            <p>Chapter Objectives</p>
+        </div>
+        <div class="bdy-cont">
+            <p class="inr-hdr">In this chapter you will learn</p>
+            <ul>
+                <li>The rationale for css</li>
+                <li>The syntax of CSS</li>
+                <li>Where the css styles can be located</li>
+                <li>The different types of CSS selectors</li>
+                <li>What the CSS cascade is and how it works</li>
+                <li>The CSS box Model</li>
+                <li>CSS Text styles</li>
+            </ul>
+        </div>
+        <div class="desc">
+            <p>
+                <span class="higlt-t">T</span><span class="hlt-cont">his chapter provides a substantial intoduction to CSS(Cascading Style Sheets),the principal mechanism for web authors
+					to modify </span> the visual presentation of their web pages.just as with HTML,there are many bools devoted to CSS.<sup>1,2,3</sup> while simple styling is quite straightforward,more complicated CSS tasks such as layout and positioning can be quite
+                complicated.Since this book covers CSS in just two chapters, it cannot possibly cover all of it.Instead,our intent in this chapter is to cover the foundations necessary for working with contemporary CSS;Chapter 5 will cover CSS layout
+                and positioning.
+
+            </p>
+        </div>
+        <span class="higlt-num">95</span>
+    </div>
+
+</body>
+
+</html>

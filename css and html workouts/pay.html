@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>payment page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+    <style>
+        * {
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .contant {
+            background-color: #b4d2ed;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 1200px;
+            height: 790px;
+            font-family: 'Bakbak One', cursive;
+        }
+        
+        .main-cont {
+            background-color: #f9fafb;
+            display: flex;
+            position: relative;
+            top: 50px;
+            left: 0;
+            width: 1100px;
+            height: 690px;
+        }
+        
+        .full-left {
+            position: relative;
+            left: 160px;
+            top: 40px;
+            width: 550px;
+        }
+        
+        .left-cont {
+            border: 1px solid rgba(225, 225, 225, 0.6);
+            margin-top: 40px;
+            padding: 10px 10px 25px 10px;
+            background-color: white;
+            box-shadow: 4px 4px rgba(225, 225, 225, 0.6);
+            border-radius: 5px;
+            height: 340px;
+        }
+        
+        .right-cont {
+            background-color: #3195f0;
+            color: white;
+            position: relative;
+            left: 180px;
+            top: 212px;
+            width: 280px;
+            height: 380px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        
+        .left-foot {
+            position: relative;
+            top: 30px;
+        }
+        
+        input[type=text] {
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 3px solid #71b6f5;
+            width: 440px;
+            font-size: 19px;
+        }
+        
+        input[type=text-2] {
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 2px solid #dcdee1;
+            width: 260px;
+            font-size: 19px;
+        }
+        
+        input[type=text-3] {
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 2px solid #dcdee1;
+            width: 80px;
+            margin-left: 20px;
+            font-size: 19px;
+        }
+        
+        label {
+            font-size: 19px;
+            position: relative;
+            bottom: 5px;
+            color: #dcdee1;
+        }
+        
+        .higlt-foot {
+            margin-top: 30px;
+        }
+        
+        .inner {
+            margin-left: 20px;
+        }
+        
+        .payment h4 {
+            font-size: 20px;
+            position: relative;
+            top: 8px;
+        }
+        
+        .top-1 h3 {
+            font-size: 30px;
+        }
+        
+        .top-1 p {
+            color: #ccced3;
+            position: relative;
+            bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .left-cont h4 {
+            font-size: 20px;
+        }
+        
+        .higlt-bank {
+            border: 2px solid #7bbbf6;
+            border-radius: 10px;
+            background-color: #c1dffb;
+            padding: 10px 20px 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        .higlt-apple,
+        .higlt-google {
+            cursor: pointer;
+            border: 1px solid rgba(225, 225, 225, 0.6);
+            border-radius: 10px;
+            margin-left: 9px;
+            padding: 10px 25px 10px 25px;
+            font-size: 20px;
+            box-shadow: 3px 3px rgba(225, 225, 225, 0.6);
+        }
+        
+        .button-1 {
+            position: relative;
+            left: 0;
+            top: 10px;
+            border: none;
+            background-color: #f9fafb;
+        }
+        
+        .left-button a {
+            text-decoration: none;
+            color: #ccced3;
+            font-size: 20px;
+        }
+        
+        .button-2 {
+            position: absolute;
+            right: 0;
+            top: 2px;
+            border: none;
+            background-color: #3195f0;
+            border-radius: 5px;
+            border-color: #3195f0;
+            padding: 10px 20px 10px 20px;
+        }
+        
+        .right-button a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .top {
+            color: #c1dffa;
+        }
+        
+        .right-top {
+            border-bottom: 1px dashed;
+            width: 280px;
+        }
+        
+        .right-top p {
+            margin-left: 20px;
+            margin-top: 35px;
+        }
+        
+        .higlt-num {
+            font-size: 50px;
+            color: white;
+            font-weight: bolder;
+        }
+        
+        .fo {
+            margin-left: 20px;
+            line-height: 25px;
+        }
+        
+        .higlt-color {
+            color: #c1dffa;
+        }
+        
+        .in-top {
+            position: relative;
+            bottom: 10px;
+        }
+        
+        .payment {
+            position: relative;
+            top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contant">
+        <div class="main-cont">
+            <div class="full-left">
+                <div class="top-1">
+                    <h3>Confirm order and pay</h3>
+                    <p>Please make the payment,after theat you can enjoy all the features and benefites.</p>
+                </div>
+                <div class="left-cont">
+                    <div class="inner">
+                        <div class="in-top">
+                            <h4>PAYMENT METHODS</h4>
+                            <div class="icons">
+                                <span class="higlt-bank">Bank card</span>
+                                <span class="higlt-apple"><i class="fa fa-apple"></i> Pay</span>
+                                <span class="higlt-google"><i class="fa fa-google"></i> Pay</span>
+                            </div>
+                        </div>
+                        <div class="payment">
+                            <h4>PAYMENT DETAILS</h4>
+                            <label for="name">Cardholder name</label><br>
+                            <input type="text" name="name" placeholder="Cardholder Name"><br>
+                            <div class="higlt-foot">
+                                <label for="cardnumber"></label>
+                                <input type="text-2" name="cardnumber" placeholder="Card number">
+                                <label for="date"></label>
+                                <input type="text-3" name="date" placeholder="Date">
+                                <label for="cvv"></label>
+                                <input type="text-3" name="cvv" placeholder="CVV">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-foot">
+                    <div class="left-button">
+                        <button class="button-1"><a href="#">Previous step</a></button>
+                    </div>
+                    <div class="right-button">
+                        <button class="button-2"><a href="#">Pay 549.99 USD</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-cont">
+                <div class="right">
+                    <div class="right-top">
+                        <p class="top">You have to pay<br><span class="higlt-num">549</span>.99 USD</p>
+                    </div>
+                    <div class="fo">
+                        <p><span class="higlt-color"> Company</span><br>Disoft</p>
+                        <p><span class="higlt-color">Order number</span><br>123456</p>
+                        <p><span class="higlt-color">Service</span><br>New documents</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

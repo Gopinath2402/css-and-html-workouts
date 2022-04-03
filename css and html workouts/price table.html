@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>pricetag</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <style>
+        * {
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        body {
+            background-color: #354372;
+            color: #CFD6EF;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .heading h1 {
+            text-align: center;
+            font-weight: normal;
+        }
+        
+        .para p {
+            text-align: center;
+        }
+        
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+        
+        .footer ul {
+            list-style: none;
+        }
+        
+        ul li {
+            padding: 0px;
+        }
+        
+        li.higlt-basic {
+            display: block;
+            background-color: #222638;
+            padding: 7px;
+        }
+        
+        element.higlt-num {
+            display: inline-block;
+            border: 2px solid white;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            background-color: #5995FF;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        
+        li.price-1 {
+            background-color: #5995FF;
+            border: 1px solid #5995FF;
+            width: 200px;
+            padding: 10px;
+            height: 65px;
+        }
+        
+        element.w-1 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-2 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-3 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-4 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-5 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-6 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border: 1px solid white;
+            padding: 7px;
+        }
+        
+        li.higlt-buy {
+            display: block;
+            border: 1px solid #5995FF;
+            background-color: #5995FF;
+            color: white;
+            padding: 7px;
+            box-shadow: 0px 10px 6px -5px black;
+        }
+        
+        li.higlt-sta {
+            display: block;
+            background-color: #222638;
+            padding: 7px;
+        }
+        
+        element.higlt-num-2 {
+            display: inline-block;
+            border: 2px solid white;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            background-color: #06CFEB;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        
+        li.price-1-2 {
+            background-color: #06CFEB;
+            border: 1px solid #06CFEB;
+            width: 200px;
+            padding: 10px;
+            height: 65px;
+        }
+        
+        element.w-1-2 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-2-2 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-3-2 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-4-2 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-5-2 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-6-2 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border: 1px solid white;
+            padding: 7px;
+        }
+        
+        li.higlt-buy-2 {
+            display: block;
+            border: 1px solid #06CFEB;
+            background-color: #06CFEB;
+            color: white;
+            padding: 7px;
+            box-shadow: 0px 10px 6px -5px black;
+        }
+        
+        li.higlt-pre {
+            display: block;
+            background-color: #222638;
+            padding: 7px;
+        }
+        
+        element.higlt-num-3 {
+            display: inline-block;
+            border: 2px solid white;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            background-color: #B46B96;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            color: white;
+            padding: 10px;
+        }
+        
+        li.price-1-3 {
+            background-color: #B46B96;
+            border: 1px solid #B46B96;
+            width: 200px;
+            padding: 10px;
+            height: 65px;
+        }
+        
+        element.w-1-3 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-2-3 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-3-3 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-4-3 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-5-3 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-6-3 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border: 1px solid white;
+            padding: 7px;
+        }
+        
+        li.higlt-buy-3 {
+            display: block;
+            border: 1px solid #B46B96;
+            background-color: #B46B96;
+            color: white;
+            padding: 7px;
+            box-shadow: 0px 10px 6px -5px black;
+        }
+        
+        li.higlt-pro {
+            display: block;
+            background-color: #222638;
+            padding: 7px;
+        }
+        
+        element.higlt-num-4 {
+            display: inline-block;
+            border: 2px solid white;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            background-color: #FFCB46;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        
+        li.price-1-4 {
+            background-color: #FFCB46;
+            border: 1px solid #FFCB46;
+            width: 200px;
+            padding: 10px;
+            height: 65px;
+        }
+        
+        element.w-1-4 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-2-4 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-3-4 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-4-4 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-5-4 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border-bottom: 1px solid #D2D4D7;
+            padding: 7px;
+        }
+        
+        element.w-6-4 {
+            display: block;
+            background-color: white;
+            color: #41506B;
+            border: 1px solid white;
+            padding: 7px;
+        }
+        
+        li.higlt-buy-4 {
+            display: block;
+            border: 1px solid #FFCB46;
+            background-color: #FFCB46;
+            color: white;
+            padding: 7px;
+            box-shadow: 0px 10px 6px -5px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="heder">
+            <span class="heading"><h1>Pricing Table</h1></span></div>
+        <div class="para">
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
+                ante.
+            </p>
+        </div>
+        <!--footer-->
+        <div class="footer">
+            <div class="box-1">
+                <ul>
+                    <li class="higlt-basic"> Basic</li>
+                    <li class="price-1">
+                        <element class="higlt-num"> $19<br>/mo</element>
+                    </li>
+                    <li>
+                        <element class="w-1">1 Website</element>
+                    </li>
+                    <li>
+                        <element class="w-2">1GB Storge</element>
+                    </li>
+                    <li>
+                        <element class="w-3">10GB Bandwith</element>
+                    </li>
+                    <li>
+                        <element class="w-4">3 Month Support</element>
+                    </li>
+                    <li>
+                        <element class="w-5">Unlimited Sub-Domains</element>
+                    </li>
+                    <li>
+                        <element class="w-6">5 Database</element>
+                    </li>
+                    <li class="higlt-buy">Buy Now</li>
+                </ul>
+            </div>
+            <div class="box-2">
+                <ul>
+                    <li class="higlt-sta"> Standard</li>
+                    <li class="price-1-2">
+                        <element class="higlt-num-2"> $49<br>/mo</element>
+                    </li>
+                    <li>
+                        <element class="w-1-2">5 Website</element>
+                    </li>
+                    <li>
+                        <element class="w-2-2">5 GB Storge</element>
+                    </li>
+                    <li>
+                        <element class="w-3-2">50GB Bandwith</element>
+                    </li>
+                    <li>
+                        <element class="w-4-2">6 Month Support</element>
+                    </li>
+                    <li>
+                        <element class="w-5-2">Unlimited Sub-Domains</element>
+                    </li>
+                    <li>
+                        <element class="w-6-2">10 Database</element>
+                    </li>
+                    <li class="higlt-buy-2">Buy Now</li>
+                </ul>
+            </div>
+            <div class="box-3">
+                <ul>
+                    <li class="higlt-pre">Premium</li>
+                    <li class="price-1-3">
+                        <element class="higlt-num-3"> $69<br>/mo</element>
+                    </li>
+                    <li>
+                        <element class="w-1-3">20 Website</element>
+                    </li>
+                    <li>
+                        <element class="w-2-3">20 GB Storge</element>
+                    </li>
+                    <li>
+                        <element class="w-3-3">200GB Bandwith</element>
+                    </li>
+                    <li>
+                        <element class="w-4-3">9 Month Support</element>
+                    </li>
+                    <li>
+                        <element class="w-5-3">Unlimited Sub-Dimains</element>
+                    </li>
+                    <li>
+                        <element class="w-6-3">50 Database</element>
+                    </li>
+                    <li class="higlt-buy-3">Buy Now</li>
+                </ul>
+            </div>
+            <div class="box-4">
+                <ul>
+                    <li class="higlt-pro">Professional</li>
+                    <li class="price-1-4">
+                        <element class="higlt-num-4"> $99<br>/mo</element>
+                    </li>
+                    <li>
+                        <element class="w-1-4">Unlimited Website</element>
+                    </li>
+                    <li>
+                        <element class="w-2-4">100GB Storge</element>
+                    </li>
+                    <li>
+                        <element class="w-3-4">unlimited Bandwith</element>
+                    </li>
+                    <li>
+                        <element class="w-4-4">1 year Support</element>
+                    </li>
+                    <li>
+                        <element class="w-5-4">Unlimited Dimains</element>
+                    </li>
+                    <li>
+                        <element class="w-6-4">Unlimited Database</element>
+                    </li>
+                    <li class="higlt-buy-4">Buy Now</li>
+                </ul>
+            </div>
+        </div>
+</body>
+
+</html>

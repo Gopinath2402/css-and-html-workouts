@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>simple pricing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        body {
+            height: 100vh;
+            width: 100%;
+            background-color: #efeff1;
+        }
+        
+        .contant {
+            position: absolute;
+            left: 50%;
+            top: 5%;
+            transform: translate(-50%);
+            width: 90%;
+            height: 850px;
+            padding: 10px;
+            border: 2px solid #efeff1;
+            border-radius: 20px;
+            background-color: white;
+        }
+        
+        .head {
+            text-align: center;
+        }
+        
+        .head p {
+            padding: 10px;
+            font-weight: normal;
+        }
+        
+        .head h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+        }
+        
+        .rows {
+            display: flex;
+            padding: 10px;
+            position: relative;
+        }
+        
+        .row-2 {
+            position: relative;
+            left: 5%;
+            top: 35px;
+            line-height: 47px;
+        }
+        
+        ul {
+            list-style: none;
+            display: inline;
+        }
+        
+        .row-1 {
+            border: 1px solid #efeff1;
+            border-radius: 6px;
+            background-color: #efeff1;
+            width: 400px;
+            height: 540px;
+            position: relative;
+            left: 3%;
+            top: 45px;
+            padding-left: 20px;
+        }
+        
+        .row-1 p {
+            word-spacing: 10px;
+            padding: 5px;
+            border: 1px solid #efeff1;
+            color: rgba(0, 0, 0, 0.54);
+            border-radius: 50px;
+            background-color: white;
+            width: 160px;
+            margin-top: 10px;
+        }
+        
+        .month {
+            margin-left: -6px;
+            padding: 5px 5px 5px 15px;
+            border: 1px solid #5f30e2;
+            border-radius: 50px;
+            display: inline;
+            background-color: #5f30e2;
+            width: fit-content;
+            color: white;
+        }
+        
+        .year {
+            padding: 10px 5px 10px 17px;
+            border-radius: 50px;
+            display: inline;
+        }
+        
+        .row-1 li {
+            line-height: 100px;
+        }
+        
+        .tick-1::after {
+            content: '✔';
+            position: relative;
+            left: 60%;
+            top: 0px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #5f30e2;
+            background: #5f30e2;
+            border-radius: 50%;
+            color: white;
+            padding: 4px 6px 4px 6px;
+        }
+        
+        .tick-2::after {
+            content: '✔';
+            position: relative;
+            left: 48%;
+            top: 0px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #5f30e2;
+            background: #5f30e2;
+            border-radius: 50%;
+            color: white;
+            padding: 4px 6px 4px 6px;
+        }
+        
+        .tick-3::after {
+            content: '✔';
+            position: relative;
+            left: 65%;
+            top: 0px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #5f30e2;
+            background: #5f30e2;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            padding: 4px 6px 4px 6px;
+        }
+        
+        .wrong-1::after {
+            content: '🗙';
+            position: relative;
+            left: 55%;
+            top: 0px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #BFBABA;
+            border-radius: 50%;
+            color: #BFBABA;
+            padding: 4px 6px 4px 6px;
+        }
+        
+        .wrong-2::after {
+            content: '🗙';
+            position: relative;
+            left: 59%;
+            top: 0px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #BFBABA;
+            border-radius: 50%;
+            color: #BFBABA;
+            padding: 4px 6px 4px 6px;
+        }
+        
+        .row-2 ul {
+            position: relative;
+        }
+        
+        .row-2 ul li {
+            max-width: 600px;
+            width: 600px;
+            padding: 10px;
+            position: relative;
+        }
+        
+        .higlt-box {
+            background-color: #781FC6;
+            border: 1px solid;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .left-side {
+            position: absolute;
+            right: 50px;
+            top: 35px;
+            color: white;
+        }
+        
+        .higlt-box p {
+            padding: 10px 0px 10px 50px;
+            font-size: 25px;
+        }
+        
+        .higlt-num-1 {
+            font-size: 45px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+        }
+        
+        .right-side::before {
+            content: '✔';
+            position: relative;
+            right: 26px;
+            top: 19px;
+            width: 20px;
+            height: 20px;
+            border: 3px solid white;
+            background: white;
+            border-radius: 50%;
+            color: #5f30e2;
+            padding: 5px 7px 5px 7px;
+        }
+        
+        .higlt-save-1 {
+            display: inline;
+            border: 1px solid #A36FD1;
+            border-radius: 20px;
+            background-color: #A36FD1;
+            color: white;
+            position: relative;
+            left: 30px;
+            top: -10px;
+            padding: 5px 15px 5px 15px;
+            font-size: 15px;
+        }
+        
+        sup {
+            font-size: 15px;
+            font-weight: normal;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .higlt-box-2 {
+            background-color: white;
+            border: 1px solid #E0D9D9;
+            border-radius: 10px;
+            color: black;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .higlt-box-2 p {
+            padding: 10px 0px 10px 50px;
+            font-size: 25px;
+        }
+        
+        .left-side-2 {
+            position: absolute;
+            right: 50px;
+            top: 40px;
+        }
+        
+        .higlt-num {
+            font-size: 45px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+        }
+        
+        .higlt-save {
+            display: inline;
+            border: 1px solid white;
+            border-radius: 20px;
+            background-color: #ffdfd9;
+            color: #FE7A47;
+            position: relative;
+            left: 30px;
+            top: -10px;
+            padding: 5px 15px 5px 15px;
+            font-size: 15px;
+        }
+        
+        .right-side-2::before {
+            content: '✔';
+            position: relative;
+            right: 20px;
+            top: 19px;
+            width: 20px;
+            height: 20px;
+            border: 3px solid dimgrey;
+            background: white;
+            border-radius: 50%;
+            color: white;
+            padding: 2px 4px 2px 4px;
+        }
+        
+        .slider.round {
+            border-radius: 34px;
+        }
+        
+        .slider.round:before {
+            border-radius: 50%;
+        }
+        
+        .switch {
+            position: relative;
+            left: 40px;
+            top: 55px;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        input:checked+.slider {
+            background-color: #34D77D;
+        }
+        
+        input:focus+.slider {
+            box-shadow: 0 0 1px #34D77D;
+        }
+        
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+        
+        .foot-right {
+            display: flex;
+        }
+        
+        .higlt-save-4 {
+            display: inline;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-color: #ffdfd9;
+            color: #FE7A47;
+            position: relative;
+            left: 0px;
+            top: 10px;
+            padding: 5px 15px 5px 15px;
+            font-size: 19px;
+        }
+        
+        .foot-right-side {
+            position: absolute;
+            top: 30px;
+            left: 130px;
+            font-size: 30px;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .left-button {
+            position: absolute;
+            right: 60px;
+        }
+        
+        .button {
+            display: block;
+            border-style: none;
+            border: 2px solid white;
+            text-align: center;
+            margin: auto;
+            border-radius: 20px;
+            background-color: #781FC6;
+        }
+        
+        .button a {
+            text-decoration: none;
+            font-size: 20px;
+            display: block;
+            color: #E2356F;
+            width: 200px;
+            padding: 20px 40px 20px 40px;
+            color: white;
+        }
+        
+        .footer {
+            position: relative;
+            top: 7%;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!--head section-->
+    <section class="contant">
+        <section class="head-cont">
+            <div class="head">
+                <h2>Simple,transparent pricing</h2>
+                <p>No contracts.No surprise fees.</p>
+        </section>
+        <!--middle section-->
+        <section class="mid">
+            <div class="mid-cont">
+                <div class="rows">
+                    <div class="row-1">
+                        <p><span class="month"> Monthly </span><span class="year"> Yearly</span></p>
+                        <ul>
+                            <li class="tick-1">All limited links</li>
+                            <li class="tick-2">Own analystic platform</li>
+                            <li class="tick-3">Chat support</li>
+                            <li class="wrong-1">Optimize hashtags</li>
+                            <li class="wrong-2">Unlimited users</li>
+                        </ul>
+                    </div>
+                    <div class="row-2">
+                        <ul>
+                            <li class="box-1">
+                                <div class="higlt-box">
+                                    <p class="right-side">Intro<br><span class="higlt-save-1">save %20</span></p>
+                                    <p class="left-side"><span class="higlt-num-1">$19</span><sup>/Month</sup></p>
+                            </li>
+                            <li class="box-2">
+                                <div class="higlt-box-2">
+                                    <p class="right-side-2">Base<br><span class="higlt-save">save %20</span></p>
+                                    <p class="left-side-2"><span class="higlt-num">$39</span><sup>/Month</sup></p>
+                            </li>
+                            <li class="box-2">
+                                <div class="higlt-box-2">
+                                    <p class="right-side-2">Popular<br><span class="higlt-save">save %20</span></p>
+                                    <p class="left-side-2"><span class="higlt-num">$99</span><sup>/Month</sup></p>
+                            </li>
+                            <li class="box-2">
+                                <div class="higlt-box-2">
+                                    <p class="right-side-2">Enterprise<br><span class="higlt-save">save %20</span></p>
+                                    <p class="left-side-2"><span class="higlt-num">$119</span><sup>/Month</sup></p>
+                            </li>
+                        </ul>
+                        </div>
+                        </div>
+                        </div>
+        </section>
+
+
+        <div class="footer">
+            <hr>
+            <div class="foot-right">
+                <label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+                <p class="foot-right-side">Accept your price<br><span class="higlt-save-4">save %20</span></p>
+            </div>
+            <div class="left-button">
+                <button class="button"><a href="#">Choose Plan</a></button>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
